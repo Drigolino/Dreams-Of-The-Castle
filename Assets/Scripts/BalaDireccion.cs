@@ -12,7 +12,7 @@ public class BalaDireccion : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
-        if (rotationZ < -90 || rotationZ > 90)
+        if (rotationZ < -180 || rotationZ > 180)
             if (myPlayer.transform.eulerAngles.y == 0)
             {
                 transform.localRotation = Quaternion.Euler(180, 0, -rotationZ);
